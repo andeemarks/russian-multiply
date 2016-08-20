@@ -6,8 +6,9 @@
     0
     (reduce + numbers)))
 
-(defn remove-when-corr-even [numbers]
-  (filter odd? numbers))
+(defn remove-when-corr-even [numbers corr-numbers]
+  (let [zipper (map vector numbers corr-numbers)]
+    (mapv first (filter #(odd? (second %)) zipper))))
 
 (defn repeat-double [base count]
   (loop [number base

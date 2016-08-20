@@ -17,9 +17,9 @@
     (is (= 3 (repeat-add [3]))))
 
   (testing "remove-when-corr-even"
-    (is (= [] (remove-when-corr-even [])))
-    (is (= [1 3 5 7 9] (remove-when-corr-even [1 2 3 4 5 6 7 8 9 10])))
-    (is (= [] (remove-when-corr-even [2]))))
+    (is (= [] (remove-when-corr-even [] [])))
+    (is (= [2 4] (remove-when-corr-even [1 2 3 4 5] [6 7 8 9 10])))
+    (is (= [] (remove-when-corr-even [2] [0]))))
 
   (testing "repeat-halve"
     (is (= [123 61 30 15 7 3 1] (repeat-halve 123)))
