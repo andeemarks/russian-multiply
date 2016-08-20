@@ -6,7 +6,7 @@
     0
     (reduce + numbers)))
 
-(defn remove-evens [numbers]
+(defn remove-when-corr-even [numbers]
   (filter odd? numbers))
 
 (defn repeat-double [base count]
@@ -23,6 +23,9 @@
       (if (< number 1)
         even-factors
        (recur (quot number 2) (conj even-factors number)))))
+
+(defn multiply [n1 n2]
+  0)
 
 (defn -main
   "I don't do a whole lot ... yet."
