@@ -1,6 +1,11 @@
 (ns russian-multiply.core
   (:gen-class))
 
+(defn repeat-add [numbers]
+  (if (empty? numbers)
+    0
+    (reduce + numbers)))
+
 (defn remove-evens [numbers]
   (filter odd? numbers))
 

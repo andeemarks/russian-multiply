@@ -7,6 +7,11 @@
     (is (= [10 20 40 80 160] (repeat-double 10 5)))
     (is (= [10] (repeat-double 10 1))))
 
+  (testing "repeat-add"
+    (is (= 0 (repeat-add [])))
+    (is (= 25 (repeat-add [5 10 7 3])))
+    (is (= 3 (repeat-add [3]))))
+
   (testing "remove-evens"
     (is (= [] (remove-evens [])))
     (is (= [1 3 5 7 9] (remove-evens [1 2 3 4 5 6 7 8 9 10])))
