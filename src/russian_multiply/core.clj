@@ -1,6 +1,9 @@
 (ns russian-multiply.core
   (:gen-class))
 
+(defn remove-evens [numbers]
+  (filter odd? numbers))
+
 (defn repeat-double [base count]
   (loop [number base
           doubles '[]
