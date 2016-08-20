@@ -1,6 +1,14 @@
 (ns russian-multiply.core
   (:gen-class))
 
+(defn multiply [base count]
+  (loop [product base
+          multiples '[]
+          index 0]
+    (if (= index count)
+      multiples
+     (recur (* product 2) (conj multiples product) (inc index)))))
+
 (defn divide [divisor]
     (loop [factor divisor
             even-factors '[]]
