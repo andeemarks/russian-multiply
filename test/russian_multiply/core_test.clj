@@ -3,9 +3,9 @@
             [russian-multiply.core :refer :all]))
 
 (deftest russion-multiplication
-  (testing "multiply"
-    (is (= [10 20 40 80 160] (multiply 10 5)))
-    (is (= [10] (multiply 10 1))))
+  (testing "repeat-double"
+    (is (= [10 20 40 80 160] (repeat-double 10 5)))
+    (is (= [10] (repeat-double 10 1))))
 
   (testing "divide"
     (is (= [123 61 30 15 7 3 1] (divide 123)))

@@ -1,7 +1,7 @@
 (ns russian-multiply.core
   (:gen-class))
 
-(defn multiply [base count]
+(defn repeat-double [base count]
   (loop [product base
           multiples '[]
           index 0]
