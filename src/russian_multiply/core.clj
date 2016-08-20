@@ -26,7 +26,10 @@
        (recur (quot number 2) (conj even-factors number)))))
 
 (defn multiply [n1 n2]
-  0)
+  (let [halves (repeat-halve n1)
+        doubles (repeat-double n2 (count halves))
+        numbers-to-add (remove-when-corr-even doubles halves)]
+    (repeat-add numbers-to-add)))
 
 (defn -main
   "I don't do a whole lot ... yet."

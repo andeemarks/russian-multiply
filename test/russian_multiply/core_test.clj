@@ -3,9 +3,10 @@
             [russian-multiply.core :refer :all]))
 
 (deftest russion-multiplication
-  ; (testing "multiply"
-  ;   (is (= 0 (multiply 0 0)))
-  ;   (is (= 1 (multiply 1 1))))
+  (testing "multiply"
+    (is (= 0 (multiply 0 0)))
+    (is (= 14160 (multiply 24 590)))
+    (is (= 1 (multiply 1 1))))
 
   (testing "repeat-double"
     (is (= [10 20 40 80 160] (repeat-double 10 5)))
