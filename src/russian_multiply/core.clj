@@ -2,19 +2,19 @@
   (:gen-class))
 
 (defn repeat-double [base count]
-  (loop [product base
-          multiples '[]
+  (loop [number base
+          doubles '[]
           index 0]
     (if (= index count)
-      multiples
-     (recur (* product 2) (conj multiples product) (inc index)))))
+      doubles
+     (recur (* number 2) (conj doubles number) (inc index)))))
 
 (defn repeat-halve [divisor]
-    (loop [factor divisor
+    (loop [number divisor
             even-factors '[]]
-      (if (< factor 1)
+      (if (< number 1)
         even-factors
-       (recur (quot factor 2) (conj even-factors factor)))))
+       (recur (quot number 2) (conj even-factors number)))))
 
 (defn -main
   "I don't do a whole lot ... yet."
