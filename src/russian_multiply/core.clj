@@ -9,7 +9,7 @@
       multiples
      (recur (* product 2) (conj multiples product) (inc index)))))
 
-(defn divide [divisor]
+(defn repeat-halve [divisor]
     (loop [factor divisor
             even-factors '[]]
       (if (< factor 1)
