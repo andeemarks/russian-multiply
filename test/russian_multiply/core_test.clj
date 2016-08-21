@@ -6,6 +6,7 @@
   (testing "multiply"
     (is (= 0 (multiply 0 0)))
     (is (= 14160 (multiply 24 590)))
+    (is (= 14160 (multiply 590 24)))
     (is (= 1 (multiply 1 1))))
 
   (testing "repeat-double"
