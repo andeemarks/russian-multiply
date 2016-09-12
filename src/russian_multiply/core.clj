@@ -34,4 +34,7 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println
+    (multiply
+      (Integer/parseInt (first args))
+      (Integer/parseInt (second args)))))
